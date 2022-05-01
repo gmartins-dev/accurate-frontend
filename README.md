@@ -49,7 +49,7 @@ https://www.linkedin.com/posts/guilhermemm-dev_project-demonstration-on-pdfs-act
 -   Visual Studio Code;
 -   Next.js;
 -   React.js;
--   Node.js;
+-   MaterialUi;
 -   Axios (HTTP Client );
 -   PostMan (API send/response tests)
 <hr>
@@ -74,11 +74,21 @@ $ git clone https://github.com/guilhermemm-dev/accurate-frontend
 
 # Intall dependencies
 
-$ yarn ou npm
+$ yarn our npm:
+
+- Next:  yarn add @next
+       npm install @next
+- MaterialUi: yarn add @mui/material @mui/icons-material @emotion/react @emotion/styled 
+            npm install @mui/material @mui/icons-material @emotion/react @emotion/styled 
 
 # Run the application
 
-$ yarn ou npm start
+$ yarn our npm start:
+
+yarn run next
+npm run next
+
+
 
 ```
 
@@ -89,8 +99,9 @@ This project was developed based on the following technologies:
 - JavaScript
 - React.js
 - Next.js
-- CSS 3
-- HTML 5
+- MaterialUi
+- CSS 
+- HTML 
 
 ###  📕 Libraries
 
@@ -112,6 +123,9 @@ This project is under the MIT license.
 <hr/>
 
 Made by @guilhermemm-dev
+
+https://github.com/guilhermemm-dev
+
 
 
 
