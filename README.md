@@ -49,6 +49,4 @@ https://www.linkedin.com/posts/guilhermemm-dev_project-demonstration-on-pdfs-act
 <hr>
 
 
-
-
-
+README in progress...
