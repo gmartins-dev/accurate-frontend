@@ -8,7 +8,7 @@
 </kbd>
 </p>
 
-<h1 align="center"> #  NETFLIX CLONE USING NEXT.js </h1>
+<h1 align="center"> NETFLIX CLONE USING NEXT.js </h1>
 <p align="center">
 <img src="https://img.shields.io/badge/react%20version-18.0.0-informational"/>
 <img src="https://img.shields.io/badge/next%20version-12.1.5-informational" />
@@ -58,7 +58,7 @@ https://www.linkedin.com/posts/guilhermemm-dev_project-demonstration-on-pdfs-act
 
 If you want to run the project on your local machine, just follow the steps below:
 
-###  ⚙ Pré-requiriments
+###  ⚙ Pre-requiriments
 
 Before starting, you will need to have the following tools installed on your local machine project:
 [Git](https://git-scm.com), [React.js](https://reactjs.org/), [Next.js](https://nextjs.org/), [Node.js](https://nodejs.org/en/) our [Yarn](https://yarnpkg.com/).
