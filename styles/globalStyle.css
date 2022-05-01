@@ -1,0 +1,302 @@
+/* GLOBAL CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #111;
+  color: #FFF;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* MOVIE ROW COMPONENT */
+
+.movieRow{
+  margin-bottom: 30px;
+}
+
+.movieRow h2 {
+  margin: 0 0 0 30px;
+}
+
+.movieRow--listarea{
+  overflow-x: hidden;
+  padding-left: 30px;
+}
+
+.movieRow--list{
+  transition: all ease 0.5s;
+
+}
+
+.movieRow--item {
+  display: inline-block;
+  width: 150px;
+  cursor: pointer;
+}
+
+.movieRow--item img{
+  width: 100%;
+  transform: scale(0.9); /* animação/efeito de "hoover" nas imagens */
+  transition: all ease 0.2s;
+}
+
+.movieRow--item img:hover{
+  transform: scale(1); /* animação/efeito de "hoover" nas imagens */
+}
+
+.movieRow--left, .movieRow--right{
+  position: absolute;
+  width: 40px;
+  height: 225px;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+  transition: all ease 0.5s;
+}
+
+.movieRow--left{
+  left: 0;
+}
+
+.movieRow--right{
+  right: 0;
+}
+
+.movieRow:hover .movieRow--left, 
+.movieRow:hover .movieRow--right {
+  opacity: 1;
+}
+
+
+/* FEATURED COMPONENT */
+
+
+.featured{
+  height: 80vh;
+}
+
+.featured--vertical {
+
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(to top, #111 10%, transparent 90%);
+
+}
+
+.featured--horizontal {
+
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(to right, #111 30%, transparent 70%);
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
+  padding-bottom: 150px;
+  padding-top: 180px;
+
+}
+
+.featured--name{
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.featured--info{
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.featured--rating, 
+.featured--year, 
+.featured--seasons{
+  display: inline-block;
+  margin-right: 15px;
+}
+
+
+.featured--rating{
+  color: #46d369;
+}
+
+.featured--description{
+  margin-top: 15px;
+  font-size: 20px;
+  color: #999;
+  max-width: 40%;
+}
+
+.featured--buttons{
+  margin-top: 10px;
+}
+
+.featured--watchbutton, 
+.featured--mylistbutton{
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-right: 10px;
+  opacity: 1;
+  transition: all ease 0.2s;
+}
+
+.featured--watchbutton:hover, 
+.featured--mylistbutton:hover{
+  opacity: 0.7;
+}
+
+.featured--watchbutton {
+  background-color: #FFF;
+  color: #000;
+}
+
+.featured--mylistbutton {
+  background-color: #333;
+  color: #FFF;
+}
+
+.featured--watchbutton a:link, a:visited, a:hover, a:active{
+  background-color: #FFF;
+  color: #000;
+  text-decoration: none;
+}
+
+.featured--mylistbutton a:link, a:visited, a:hover, a:active{
+  background-color: #333;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.featured--genres{
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.lists {
+  margin-top: -150px;
+}
+
+
+/* HEADER COMPONENT */
+
+header{
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  background: transparent;
+  transition: all ease 0.5s;
+}
+
+header.black{
+  background-color: #141414;
+}
+
+.header--logo {
+  height: 25px;
+}
+
+.header--logo img{
+  height: 100%;
+}
+
+.header--user {
+  height: 35px;
+}
+
+.header--user img{
+  height: 100%;
+  border-radius: 3px;
+}
+
+
+/* FOOTER COMPONENT */
+
+footer{
+  margin: 50px 0;
+  text-align: center;
+}
+
+/* LOADING COMPONENT */
+
+.loading{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* RESPONSIVE COMPONENT */
+
+@media (max-width:760px){
+
+  .movieRow--left,
+  .movieRow--right{
+    opacity: 1;
+  }
+
+  .featured{
+    height: 90vh;
+  }
+  .featured--name{
+    font-size: 40px;
+  }
+  .featured--info{
+    font-size: 16px;
+  }
+  .featured--description{
+    font-size: 14px;
+    max-width: 100%;
+    margin-right: 30px;
+  }
+  .featured--genres{
+    font-size: 14px;
+  }
+  .featured--watchbutton,
+  .featured--mylistbutton{
+    font-size: 16px;
+  }
+}
+
+
+@media (max-height:760px){
+
+  .featured{
+    height: 80vh;
+    margin-bottom: 12%;
+  }
+  
+
+  .featured--horizontal {
+    padding-bottom: 150px;
+    padding-top: 120px;
+  
+  }
+}
