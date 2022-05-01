@@ -24,8 +24,7 @@ Study in practice how the SSR (Server Side Rendering) feature of the React Next.
 
 An application with extremely fast and flawless loading, with a fully responsive design and mobile friendly.
 
-See more infos about this project on my LinkedIn post:
-https://www.linkedin.com/posts/guilhermemm-dev_project-demonstration-on-pdfs-activity-6925777592532750336-i75T?utm_source=linkedin_share&utm_medium=member_desktop_web
+See more infos about this project on my LinkedIn post: https://bit.ly/post-nextflix
 <hr>
 
 ## Demonstration:
