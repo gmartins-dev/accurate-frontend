@@ -12,7 +12,6 @@
 <p align="center">
 <img src="https://img.shields.io/badge/react%20version-18.0.0-informational"/>
 <img src="https://img.shields.io/badge/next%20version-12.1.5-informational" />
-<img src="https://img.shields.io/badge/last%20commit-may-blue" />
 <img src="https://img.shields.io/badge/license-MIT-success"/>
 </p>
 
