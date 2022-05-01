@@ -2,7 +2,6 @@ import { apiBase, apiKey } from "../../lib/tmdb";
 
 const basicFetch = async (endpoint) => {
     
-
     const req = await fetch(`${apiBase}${endpoint}`);
     const json = await req.json();
 
@@ -66,8 +65,7 @@ export default {
      ]
     },
 
-
-    //funcao para pegar a informação de um filme aleatorio especifico para usar no featured movie
+    //function to get the information of a specific random movie to use in the featured movie
   getMovieInfo: async (movieId, type) => {
 
         let info = {};
@@ -86,9 +84,7 @@ export default {
                 default:
                     info = null;
                     break;
-
             }
-
         }
         return info;
     }

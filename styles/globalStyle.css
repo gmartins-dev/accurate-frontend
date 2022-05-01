@@ -43,12 +43,12 @@ body{
 
 .movieRow--item img{
   width: 100%;
-  transform: scale(0.9); /* animação/efeito de "hoover" nas imagens */
+  transform: scale(0.9); 
   transition: all ease 0.2s;
 }
 
 .movieRow--item img:hover{
-  transform: scale(1); /* animação/efeito de "hoover" nas imagens */
+  transform: scale(1);
 }
 
 .movieRow--left, .movieRow--right{

@@ -15,19 +15,18 @@ export default function Home({list}) {
 
   const [featuredData, setFeaturedData] = useState(null);
 
-  //variavel para controlar quando o header deve ficar transparente ou preto
+  //control when the netflix logo header should be transparent or black
   const [blackHeader, setBlackHeader] = useState(false);
-
 
   useEffect((  ) => {
 
     const loadAll = async () => {
 
-    //Pegando a lista total de filmes do tmdb
+    //Getting the full list of movies from tmdb
     let list = await dbApi.getHomeList();
     setMovieList(list);
 
-    //Pegando  aleatoriamente o filme em destaque(featured)
+    //Randomly picking up the featured movie(featured)
     let featuredMovie = list.filter(i=>i.slug === 'originals');
     let randomFeatured = Math.floor(Math.random() * (featuredMovie[0].items.results.length - 1))
     let featuredChosen = featuredMovie[0].items.results[randomFeatured]; 
@@ -37,8 +36,7 @@ export default function Home({list}) {
     loadAll();
   }, []);
   
-  //useeffect usado no header para controlar 
-  //quando deve ficar black ou transparente
+  //useeffect control when the netflix logo header should be transparent or black
   useEffect(() => {
 
     const scrollListener = () => {
@@ -56,8 +54,8 @@ export default function Home({list}) {
     }
   }, []);
   
-  
   return (
+
     <main className="body">
       <Head>
         <title>NextFlix</title>
@@ -72,31 +70,19 @@ export default function Home({list}) {
       {featuredData && <FeaturedMovie 
       item={featuredData} />}
 
-        
           <section className="lists">
           {movieList.map( (item,key) => (
 
-            
               <MovieRow key={key} 
               
               title={item?.title} 
               items={item?.items}
-            
-              
               />
-            
-          
           ))}
           </section>
           <div>
-
           </div>
-     
       </div>
-      
-      
-  
-
 
       <footer>
         Made using Next framework for React
@@ -105,8 +91,7 @@ export default function Home({list}) {
         <br/>it was made for the purpose of practical learning only.
       </footer>
       
-    
-      {movieList.length <= 0 && /* verificação para o loading aparecer apenas antes do site carregar */
+      {movieList.length <= 0 && /* check for loading to appear just before the site loads */
        <div className="loading">
         <img src="https://media.filmelier.com/noticias/br/2020/03/Netflix_LoadTime.gif" />
         </div>
@@ -117,19 +102,15 @@ export default function Home({list}) {
   );
 }
 
-
 //function for set server side render mode
 export async function getServerSideProps() {
-  
-              
+           
   const response = await axios.get(`${apiBase}/trending/tv/week?api_key=${apiKey}`);
-  
 
   return{
 
     props:{
       list: response.data.results
     }
-
   }
 }
