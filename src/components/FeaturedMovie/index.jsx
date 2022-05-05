@@ -1,4 +1,5 @@
 import React from "react";
+import { Container } from "./styles";
 
 export default function FeaturedMovie ({item}) {
 
@@ -18,32 +19,32 @@ export default function FeaturedMovie ({item}) {
     }
 
     return (
-
-        <section className="featured"
+    <>  
+        <Container className="featured"
             style={{
                 backgroundSize : 'cover',
                 backgroundPosition: 'center',
                 backgroundImage: `url(https://image.tmdb.org/t/p/original${item.backdrop_path})`
-
             }}>
+            <div className="featured_vertical">
+                
+                <div className="featured_horizontal">
+                        
+                    <div className="featured_name">
+                    {item.original_name}
+                    </div>
 
-            <div className="featured--vertical">
-
-               <div className="featured--horizontal">
-                   <div className="featured--name">
-                       {item.original_name}
-                   </div>
-
-                   <div className="featured--info">
-                        <div className="featured--rating">
+                    <div className="featured_info">
+                    
+                        <div className="featured_rating">
                             Rating: {item.vote_average}
                         </div>
 
-                        <div className="featured--year">
+                        <div className="featured_year">
                             Released: {firstDate.getFullYear()}
                         </div>
 
-                        <div className="featured--seasons">
+                        <div className="featured_seasons">
                             Seasons: {item.number_of_seasons}
                         </div>
 
@@ -51,21 +52,22 @@ export default function FeaturedMovie ({item}) {
                             <strong>Genres: </strong> {genres.join(', ')}
                         </div>
 
-                        <div className="featured--description">
+                        <div className="featured_description">
                             {description}
                         </div>
-
-                        <div className="featured--buttons">
-                            <div className="featured--watchbutton">
+                        <div className="featured_buttons">
+                            
+                            <div className="featured_watchbutton">
                                 <a href={`/watch/${item.id}`}>▶ Watch </a>
                             </div>
-                            <div className="featured--mylistbutton">
+                            <div className="featured_mylistbutton">
                                 <a href={`/list/add/${item.id}`}>+ My List</a>
-                            </div>
-                        </div>
-                   </div>
-               </div>
+                            </div>  
+                        </div>          
+                    </div>
+                </div>     
             </div>
-        </section>
+        </Container>
+    </>
     )
 }
