@@ -75,6 +75,7 @@ export default function Home({list}) {
 
   //Loading Component controller
   if(movieList.length <= 0) return <Loading />
+  
 
   return (
     <div className="page">
@@ -115,12 +116,6 @@ export default function Home({list}) {
         <Intro />
       </div> 
     }    
-
-    {movieList.length <= 0 && 
-      <div className="loading">
-        <Loading />
-      </div>
-    }
   </div>
   );
 }

@@ -1,4 +1,11 @@
 import styled from "styled-components"
+import { keyframes } from "styled-components"
+
+const spin = keyframes`
+    100% {
+        transform: rotate(360deg);
+    }
+`
 
 export const Container = styled.div`
 
@@ -10,7 +17,7 @@ export const Container = styled.div`
     height: 60px;
     transform: translateX(-50%);
 
-    &:after {
+    &::after {
         content: "";
         background-image: url(https://assets.nflxext.com/en_us/pages/wiplayer/site-spinner.png);
         background-repeat: no-repeat;
@@ -21,21 +28,12 @@ export const Container = styled.div`
         margin: -6px;
         width: inherit;
         height: inherit;
-        animation: nfLoader-spin 1.1s linear infinite,1 !important;
+        animation: ${spin} 1.1s linear infinite,1 !important;
     }
 
 
-@keyframes nfLoader-spin {
-    100% {
-        transform: rotate(360deg);
-    }
-}
 
-@-webkit-keyframes nfLoader-spin {
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
-}
+
 `
 
 

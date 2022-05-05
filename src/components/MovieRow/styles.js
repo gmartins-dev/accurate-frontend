@@ -20,7 +20,8 @@ export const Container = styled.div`
   
   .movieRow_item {
     display: inline-block;
-    width: 150px;
+    width: 200px;
+    height: 300px;
     cursor: pointer;
   }
   
@@ -37,7 +38,7 @@ export const Container = styled.div`
   .movieRow_left, .movieRow_right{
     position: absolute;
     width: 40px;
-    height: 225px;
+    height: 270px;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 99;
     display: flex;
@@ -47,6 +48,7 @@ export const Container = styled.div`
     cursor: pointer;
     opacity: 0;
     transition: all ease 0.5s;
+    transform: translateY(15px);
   }
   
   .movieRow_left{
