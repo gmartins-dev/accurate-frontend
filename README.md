@@ -1,4 +1,5 @@
 
+
 <p align="center">
 <kbd>
 <img width="300" style="border-radius: 5px" height="450" src="https://images2.imgbox.com/d7/aa/kzUpAROp_o.png" alt="Intro">
@@ -33,7 +34,7 @@ See more infos about this project on my LinkedIn post: https://bit.ly/post-nextf
 ## Demonstration:
 
 
- - See online at: https://bit.ly/next-flix
+ - See online at: https://accurate-frontend.vercel.app/
 
 
 <p align="center">
@@ -48,6 +49,7 @@ See more infos about this project on my LinkedIn post: https://bit.ly/post-nextf
 -   Next.js;
 -   React.js;
 -   MaterialUi;
+-   Styled-components;
 -   Axios (HTTP Client );
 -   PostMan (API send/response tests)
 <hr>
@@ -76,8 +78,8 @@ $ yarn our npm:
 
 - Next:  yarn add @next
        npm install @next
-- MaterialUi: yarn add @mui/material @mui/icons-material @emotion/react @emotion/styled 
-            npm install @mui/material @mui/icons-material @emotion/react @emotion/styled 
+- MaterialUi: yarn add @mui/material @mui/icons-material @emotion/react @emotion/styled @styled-components
+            npm install @mui/material @mui/icons-material @emotion/react @emotion/styled @styled-components
 
 # Run the application
 
@@ -85,8 +87,6 @@ $ yarn our npm start:
 
 yarn run next
 npm run next
-
-
 
 ```
 
@@ -98,6 +98,7 @@ This project was developed based on the following technologies:
 - React.js
 - Next.js
 - MaterialUi
+- Styled-components
 - CSS 
 - HTML 
 
