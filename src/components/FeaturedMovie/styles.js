@@ -6,27 +6,6 @@ export const Container = styled.section`
     height: 80vh;
   }
   
-  .featured_vertical {
-  
-    width: inherit;
-    height: inherit;
-    background: linear-gradient(to top, #111 10%, transparent 90%);
-  
-  }
-  
-  .featured_horizontal {
-  
-    width: inherit;
-    height: inherit;
-    background: linear-gradient(to right, #111 30%, transparent 70%);
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 30px;
-    padding-bottom: 150px;
-    padding-top: 180px;
-  
-  }
-  
   .featured_name{
     font-size: 60px;
     font-weight: bold;
@@ -44,7 +23,6 @@ export const Container = styled.section`
     display: inline-block;
     margin-right: 15px;
   }
-  
   
   .featured_rating{
     color: #46d369;
@@ -155,4 +133,26 @@ export const Container = styled.section`
 
     }
   }
+`
+
+export const FeaturedVertical = styled.div`
+
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(to top, #111 10%, transparent 90%);
+
+
+`
+
+export const FeaturedHorizontal = styled.div`
+  
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(to right, #111 30%, transparent 70%);
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
+  padding-bottom: 150px;
+  padding-top: 180px;
+
 `

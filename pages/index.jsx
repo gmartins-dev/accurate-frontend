@@ -41,7 +41,7 @@ export default function Home({list}) {
     let chosenInfo = await dbApi.getMovieInfo(featuredChosen.id, 'tv');
     setFeaturedData(chosenInfo);
 
-     // Set Loader Start Netflix
+     // Set Loader Intro Netflix
      if(list.length > 0) {
         setIntro(true);
     
@@ -76,9 +76,8 @@ export default function Home({list}) {
   //Loading Component controller
   if(movieList.length <= 0) return <Loading />
   
-
   return (
-    <div className="page">
+    <main>
       <Head>
         <title>NextFlix</title>
         <meta name="description" content="A Netflix clone using Next.js" />
@@ -89,7 +88,7 @@ export default function Home({list}) {
         <>
         <Header black={blackHeader} />
         
-        <div className="page">
+        <div className="HomePage">
 
         {featuredData && <FeaturedMovie 
         item={featuredData} />}
@@ -116,11 +115,11 @@ export default function Home({list}) {
         <Intro />
       </div> 
     }    
-  </div>
+  </main>
   );
 }
 
-//function for set server side render mode
+//function for Next.js set server side render mode
 export async function getServerSideProps() {
 
   const response = await axios.get(`${apiBase}/trending/tv/week?api_key=${apiKey}`);

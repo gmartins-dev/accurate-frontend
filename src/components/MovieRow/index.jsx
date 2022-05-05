@@ -32,28 +32,22 @@ export default function MovieRow ({title, items}) {
         <>
         <Container className="movieRow">
             <h2>{title}</h2>
-            
             <div className="movieRow_left"
             onClick={handleLeftArrow}>
                 <NavigateBeforeIcon style={{fontSize: 50}} />
             </div>
-
             <div className="movieRow_right" onClick={handleRightArrow}>
                 <NavigateNextIcon style={{fontSize: 50}} />
             </div>
-            
-            <div className="movieRow_listarea">
-                
+                        <div className="movieRow_listarea">
                 <div className="movieRow_list" 
                 style={{marginLeft: scrollX, width: items?.results?.length * 200
                 }}>
-    
                 {items?.results?.length > 0 && items?.results.map((item, key) => (
                     
                     <div key={`movieRowKey${key}`} className="movieRow_item"> 
                       <img src= {`https://image.tmdb.org/t/p/w300${item.poster_path}`} alt={item.original_title} />
-                    </div>
-                    
+                    </div>                    
                 ))}
                 </div>
             </div>

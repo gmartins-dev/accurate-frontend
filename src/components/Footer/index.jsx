@@ -4,7 +4,6 @@ import { Container } from './styles'
 export default function Footer () {
 
     return(
-
         <Container>
             Made using Next framework for React
             <br/>by: <a href ="https://github.com/guilhermemm-dev"> @guilhermemm-dev</a>

@@ -9,7 +9,6 @@ const spin = keyframes`
 
 export const Container = styled.div`
 
-
     position: absolute;
     top: 45%;
     left: 50%;
@@ -30,10 +29,7 @@ export const Container = styled.div`
         height: inherit;
         animation: ${spin} 1.1s linear infinite,1 !important;
     }
-
-
-
-
+    
 `
 
 

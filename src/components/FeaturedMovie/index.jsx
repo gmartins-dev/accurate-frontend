@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "./styles";
+import { Container, FeaturedVertical, FeaturedHorizontal } from "./styles";
 
 export default function FeaturedMovie ({item}) {
 
@@ -26,16 +26,15 @@ export default function FeaturedMovie ({item}) {
                 backgroundPosition: 'center',
                 backgroundImage: `url(https://image.tmdb.org/t/p/original${item.backdrop_path})`
             }}>
-            <div className="featured_vertical">
+            <FeaturedVertical>
                 
-                <div className="featured_horizontal">
+                <FeaturedHorizontal>
                         
                     <div className="featured_name">
                     {item.original_name}
                     </div>
 
-                    <div className="featured_info">
-                    
+                    <div className="featured_info">                   
                         <div className="featured_rating">
                             Rating: {item.vote_average}
                         </div>
@@ -65,8 +64,8 @@ export default function FeaturedMovie ({item}) {
                             </div>  
                         </div>          
                     </div>
-                </div>     
-            </div>
+                </FeaturedHorizontal>     
+            </FeaturedVertical>
         </Container>
     </>
     )
