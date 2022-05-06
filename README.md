@@ -122,9 +122,11 @@ This project is under the MIT license.
 
 <hr/>
 
-Made by @guilhermemm-dev
+<h3> Made by Guilherme Martins - @guilhermemm-dev </h3>
 
-https://github.com/guilhermemm-dev
+- LinkedIn: https://www.linkedin.com/in/guilhermemm-dev/
+- GitHub: https://github.com/guilhermemm-dev
+- Portfolio: https://guilhermemm-dev.github.io/portifolio/
 
 
 
